@@ -6,23 +6,17 @@ This repository hosts the code and resources for the research project conducted 
 
 3D reconstruction of biplane cerebral angiograms remains a significant challenge due to depth information loss and unknown pixel-wise correlations between input images. Occlusions from only two views further complicate the reconstruction of fine vessel details. This research uses a coordinate-based neural network with a deterministic Fourier feature mapping to reconstruct more accurate cerebral angiogram slices. Key metrics from our results include a peak signal-to-noise ratio (PSNR) of 26.32±0.36, and a structural similarity index measure (SSIM) of 61.38±1.79.
 
-## Free-Viewpoint Portraits
-
-Our approach involves:
-1. Taking a maximum intensity projection to obtain simulated biplane data.
-2. Extracting rows from both images and leveraging deep learning to reconstruct the corresponding 3D slices.
 
 ## Justification of Gaussian Fourier Features
 
 We demonstrate the necessity of Gaussian Fourier Features with a scaling parameter B of 10.0, highlighting their ability to model higher frequency functions and enhance learning over basic or no positional encoding setups.
 
-## Method Overview
 
-Our network architecture includes detailed visualization of input and output channels, kernel size, padding, and stride for each convolutional layer.
 
-## Qualitative Results
+https://github.com/FFVesselRecon/FFVesselRecon/assets/167462507/829ab3bd-ec34-4c24-a0c6-10b80bedc34b
 
-We provide visual comparisons between our Fourier feature network's 2D reconstruction, a vanilla 2D decoder, and the backprojection method. Successfully reconstructed vessels are highlighted in green, while the red areas indicate regions where reconstruction was less effective.
+
+
 
 ## Related Research
 
