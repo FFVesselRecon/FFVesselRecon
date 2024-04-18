@@ -1,16 +1,43 @@
-### Hi there 👋
+# Fourier Feature Network for 3D Vessel Reconstruction from Biplane Angiograms
 
-<!--
-**FFVesselRecon/FFVesselRecon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This repository hosts the code and resources for the research project conducted by Sean Wu, Naoki Kaneko, David S. Liebeskind, and Fabien Scalzo, collaborating between Pepperdine University and UCLA. This project aims to tackle the challenging problem of 3D vessel reconstruction from biplane cerebral angiograms using Fourier feature networks.
 
-Here are some ideas to get you started:
+## Abstract
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+3D reconstruction of biplane cerebral angiograms remains a significant challenge due to depth information loss and unknown pixel-wise correlations between input images. Occlusions from only two views further complicate the reconstruction of fine vessel details. This research uses a coordinate-based neural network with a deterministic Fourier feature mapping to reconstruct more accurate cerebral angiogram slices. Key metrics from our results include a peak signal-to-noise ratio (PSNR) of 26.32±0.36, and a structural similarity index measure (SSIM) of 61.38±1.79.
+
+## Free-Viewpoint Portraits
+
+Our approach involves:
+1. Taking a maximum intensity projection to obtain simulated biplane data.
+2. Extracting rows from both images and leveraging deep learning to reconstruct the corresponding 3D slices.
+
+## Justification of Gaussian Fourier Features
+
+We demonstrate the necessity of Gaussian Fourier Features with a scaling parameter B of 10.0, highlighting their ability to model higher frequency functions and enhance learning over basic or no positional encoding setups.
+
+## Method Overview
+
+Our network architecture includes detailed visualization of input and output channels, kernel size, padding, and stride for each convolutional layer.
+
+## Qualitative Results
+
+We provide visual comparisons between our Fourier feature network's 2D reconstruction, a vanilla 2D decoder, and the backprojection method. Successfully reconstructed vessels are highlighted in green, while the red areas indicate regions where reconstruction was less effective.
+
+## Related Research
+
+- [Backprojection-based 3D Reconstruction](#)
+- [Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains](#)
+- [2D to 3D reconstruction of biplane angiograms with conditional GAN](#)
+
+## BibTeX Citation
+
+If you find this work useful in your research, please consider citing:
+
+```bibtex
+@article{wu2024fourier,
+  author={Wu, Sean and Kaneko, Naoki and Liebeskind, David and Scalzo, Fabien},
+  title={Fourier Feature Network for 3D Vessel Reconstruction from Biplane Angiograms},
+  journal={(In Review) Journal of Machine Vision and Applications},
+  year={2024}
+}
