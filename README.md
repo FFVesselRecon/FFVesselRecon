@@ -6,7 +6,7 @@ This repository hosts the code and resources for the research project by Sean Wu
 
 ### Code Availability
 
-This repository provides complete code for both the training and inference phases of our Fourier feature network. Users can replicate our results or adapt the methodology for their own datasets with the following resources:
+This repository provides code for both the training and inference phases of our Fourier feature network. Users can replicate our results or adapt the methodology for their own datasets with the following resources:
 
 - `training/fourier_features_training.py`: Script for training the network on your data.
 - `infererence/fourier_feature_inference.py`: Script for running inference using a trained model to reconstruct 3D slices.
