@@ -1,10 +1,29 @@
 # Fourier Feature Network for 3D Vessel Reconstruction from Biplane Angiograms
 
-This repository hosts the code and resources for the research project conducted by Sean Wu, Naoki Kaneko, David S. Liebeskind, and Fabien Scalzo, collaborating between Pepperdine University and UCLA. This project aims to tackle the challenging problem of 3D vessel reconstruction from biplane cerebral angiograms using Fourier feature networks.
+This repository hosts the code and resources for the research project by Sean Wu, Naoki Kaneko, David S. Liebeskind, and Fabien Scalzo
 
-## Abstract
+## Usage
 
-3D reconstruction of biplane cerebral angiograms remains a significant challenge due to depth information loss and unknown pixel-wise correlations between input images. Occlusions from only two views further complicate the reconstruction of fine vessel details. This research uses a coordinate-based neural network with a deterministic Fourier feature mapping to reconstruct more accurate cerebral angiogram slices. Key metrics from our results include a peak signal-to-noise ratio (PSNR) of 26.32±0.36, and a structural similarity index measure (SSIM) of 61.38±1.79.
+### Code Availability
+
+This repository provides complete code for both the training and inference phases of our Fourier feature network. Users can replicate our results or adapt the methodology for their own datasets with the following resources:
+
+- `training/fourier_features_training.py`: Script for training the network on your data.
+- `infererence/fourier_feature_inference.py`: Script for running inference using a trained model to reconstruct 3D slices.
+
+### Data Privacy
+
+To respect patient privacy, the dataset used for this research will not be provided publicly. We encourage researchers to apply our methods to their own cerebra angiogram datasets.
+
+### Getting Started
+
+To get started with the provided scripts, you should clone this repository and install the required dependencies:
+
+```bash
+git clone [https://github.com/your-repository-url](https://github.com/FFVesselRecon/FFVesselRecon.git)
+cd FFVesselRecon
+pip install -r requirements.txt
+
 
 
 ## Justification of Gaussian Fourier Features
